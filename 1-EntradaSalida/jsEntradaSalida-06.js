@@ -4,6 +4,13 @@ transformarlos a enteros (parseInt) y Sumarlos.
 mostrar el resulto por medio de "ALERT"*/
 function sumar()
 {
-	alert("ok");
+let numero1;
+let numero2;
+let resultado;
+
+numero1 = parseInt(txtIdNumeroUno.value);
+numero2 = parseInt(txtIdNumeroDos.value);
+resultado = numero1+numero2;
+	alert("el resultado es "+resultado+".");
 }
 
