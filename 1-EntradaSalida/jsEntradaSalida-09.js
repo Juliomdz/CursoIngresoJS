@@ -6,5 +6,12 @@ en el cuadro de texto "RESULTADO".*/
 function mostrarAumento()
 {
 
-	alert("ok");
+let importe
+let resultado
+
+importe = parseInt(txtIdSueldo.value);
+
+resultado =(importe*(1.1))
+
+txtIdResultado.value = parseInt(resultado);
 }

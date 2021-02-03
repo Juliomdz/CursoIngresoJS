@@ -1,13 +1,13 @@
 function mostrar()
 {
-    let PrecioFinal
-let Precio
-let Descuento
+    let precioFinal
+let precio
+let descuento
 
-Precio=parseInt(prompt("Ingrese el precio:"))
-Descuento=parseInt(prompt("ingrese el porcentaje de descuento:"))
+precio=parseInt(prompt("Ingrese el precio:"))
+descuento=parseInt(prompt("ingrese el porcentaje de descuento:"))
 
-PrecioFinal=(((100-Descuento)/100))*Precio
-elPrecioFinal.value=PrecioFinal
+precioFinal=(((100-descuento)/100))*precio
+elPrecioFinal.value=precioFinal
 
 }
