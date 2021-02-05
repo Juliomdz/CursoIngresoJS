@@ -1,9 +1,9 @@
 
 function mostrar()
 {
-let ancho
-let largo
-let perimetro
+let ancho;
+let largo;
+let perimetro;
 
 ancho=parseInt(prompt("ingrese el ancho:"));
 largo=parseInt(prompt("Ingrese el largo:"));
