@@ -5,6 +5,7 @@ Al ingresar una edad menor a 18 años y un estado civil distinto
 pero si no es asi, y es soltero y no es menor, 
 mostrar el siguiente mensaje: 'Es soltero y no es menor.'
 */
+/*
 function mostrar()
 {
 	 
@@ -19,4 +20,21 @@ function mostrar()
 
 	
 
-}//FIN DE LA FUNCIÓN
+}
+*/
+
+function mostrar()
+{
+	let edad;
+	let edadParseada;
+	let estCivil;
+	
+	edad = txtIdEdad.value; //tomo la edad
+		edadParseada = parseInt(edad);
+	estCivil=estadoCivil.value;
+	if(edad >= 18 && estCivil == "Soltero")
+	 {
+		alert("Es soltero y no es menor.");
+	}
+}
+//FIN DE LA FUNCIÓN
