@@ -21,7 +21,6 @@ function CalcularPrecio ()
      let marcaLamparas;
      let porcentajeDescuento;
      let precioLamparas;
-     let precioConDescuento;
      let precioFinal;
      let ingresosBrutos;
 
@@ -32,47 +31,54 @@ function CalcularPrecio ()
     {
          porcentajeDescuento = 50;
     }
-    if (cantidadLamparas == 5)
+    else
     {
-        if(marcaLamparas =="ArgentinaLuz")
+        if (cantidadLamparas == 5)
         {
+            if(marcaLamparas =="ArgentinaLuz")
+            {
         porcentajeDescuento = 40;
-        }
-        else{ 
+            }
+            else{ 
         porcentajeDescuento = 30;
+            }
+        }    
+        else if(cantidadLamparas == 4)
+        {
+            if(marcaLamparas =="ArgentinaLuz" || marcaLamparas == "FelipeLamparas")
+            {
+                porcentajeDescuento= 25;
+            }
+            else
+            {
+                porcentajeDescuento =20;
+            }
+        }
+        else if(cantidadLamparas == 3)
+        {
+            if(marcaLamparas == "ArgentinaLuz")
+            {
+                porcentajeDescuento= 15;
+            }
+            if(marcaLamparas == "FelipeLamparas")
+            {
+                porcentajeDescuento = 10;
+            }
+            else if (marcaLamparas !="ArgentinaLuz" && marcaLamparas !="FelipeLamparas")
+            {
+                porcentajeDescuento = 5;
+            }
+        }
+        else if(cantidadLamparas < 3)
+        {
+                porcentajeDescuento= 0;
         }
     }
-    if(cantidadLamparas == 4)
-    {
-        if(marcaLamparas =="ArgentinaLuz" || marcaLamparas == "FelipeLamparas")
-        {
-            porcentajeDescuento= 25;
-        }
-        else
-        {
-            porcentajeDescuento =20;
-        }
-    }
-    if(cantidadLamparas == 3)
-    {
-        if(marcaLamparas == "ArgentinaLuz")
-        {
-            porcentajeDescuento= 15;
-        }
-        if(marcaLamparas == "FelipeLamparas")
-        {
-            porcentajeDescuento = 10;
-        }
-        else if (marcaLamparas !="ArgentinaLuz" && marcaLamparas !="FelipeLamparas")
-        {
-            porcentajeDescuento = 5;
-        }
-    }
-    precioConDescuento = precioLamparas-(precioLamparas*(porcentajeDescuento/100));
-    precioFinal = precioConDescuento*cantidadLamparas;
+    precioFinal = (precioLamparas-(precioLamparas*(porcentajeDescuento/100)))*cantidadLamparas;
     if(precioFinal > 120)
     {
         ingresosBrutos = (precioFinal*0.10);
+        precioFinal = precioFinal+ingresosBrutos;
         alert("Usted pagará $"+ingresosBrutos+" en concepto de ingresos brutos.")
     }
     txtIdprecioDescuento.value = precioFinal;
