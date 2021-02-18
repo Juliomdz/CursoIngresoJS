@@ -15,6 +15,7 @@ sumar un 10% de ingresos brutos en informar del impuesto con el
  siguiente mensaje: ”IIBB Usted pago X”, siendo X el impuesto 
  que se pagó.
  */
+/*
 function CalcularPrecio () 
 {
      let cantidadLamparas;
@@ -73,6 +74,77 @@ function CalcularPrecio ()
         {
                 porcentajeDescuento= 0;
         }
+    }
+    precioFinal = (precioLamparas-(precioLamparas*(porcentajeDescuento/100)))*cantidadLamparas;
+    if(precioFinal > 120)
+    {
+        ingresosBrutos = (precioFinal*0.10);
+        precioFinal = precioFinal+ingresosBrutos;
+        alert("Usted pagará $"+ingresosBrutos+" en concepto de ingresos brutos.")
+    }
+    txtIdprecioDescuento.value = precioFinal;
+}
+*/
+
+function CalcularPrecio () 
+{
+     let cantidadLamparas;
+     let marcaLamparas;
+     let porcentajeDescuento;
+     let precioLamparas;
+     let precioFinal;
+     let ingresosBrutos;
+
+    cantidadLamparas = parseInt(txtIdCantidad.value);
+    marcaLamparas = Marca.value;
+    precioLamparas = parseInt(35);
+    switch (cantidadLamparas)
+    {
+        case 6:
+        case (cantidadLamparas >= 6):
+            porcentajeDescuento = 50;
+            break;
+        case 5:
+            switch (marcaLamparas)
+             {
+                case "ArgentinaLuz":
+                    porcentajeDescuento = 40;
+                    break;
+                default:
+                    porcentajeDescuento = 30;
+                    break;
+            }
+            break;
+        case 4:
+            switch (marcaLamparas)
+             {
+                case "ArgentinaLuz":
+                case "FelipeLamparas":
+                    porcentajeDescuento= 25;
+                    break;
+                default:
+                    porcentajeDescuento= 20;
+                    break;
+            }
+            break;
+        case 3:
+            switch (marcaLamparas)
+             {
+                case "ArgentinaLuz":
+                    porcentajeDescuento= 15;
+                    break;
+                case "FelipeLamparas":
+                    porcentajeDescuento= 10;
+                    break;
+                default:
+                    porcentajeDescuento= 5;
+                    break;
+            }
+            break;
+        case 2:
+        case 1:
+            porcentajeDescuento= 0;
+            break;
     }
     precioFinal = (precioLamparas-(precioLamparas*(porcentajeDescuento/100)))*cantidadLamparas;
     if(precioFinal > 120)
