@@ -101,7 +101,6 @@ function CalcularPrecio ()
     switch (cantidadLamparas)
     {
         case 6:
-        case (cantidadLamparas >= 6):
             porcentajeDescuento = 50;
             break;
         case 5:
@@ -145,6 +144,8 @@ function CalcularPrecio ()
         case 1:
             porcentajeDescuento= 0;
             break;
+        default:
+            porcentajeDescuento= 50;
     }
     precioFinal = (precioLamparas-(precioLamparas*(porcentajeDescuento/100)))*cantidadLamparas;
     if(precioFinal > 120)
