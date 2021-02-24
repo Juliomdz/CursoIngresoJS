@@ -10,14 +10,15 @@ function mostrar()
 	
 	contador=0;
 	acumulador=0;
-	respuesta="si";
-	while (respuesta=="si")
+	respuesta=true;
+	do
 	{
 		numeroIngresado=parseInt(prompt("Ingrese un numero:"));
 		acumulador=acumulador+numeroIngresado;
 		contador++;
-		respuesta=prompt("¿Desea seguir ingresando numeros?");
+		respuesta=confirm("¿Desea seguir ingresando numeros?");
 	}
+	while (respuesta);
 	txtIdSuma.value=acumulador;
 	txtIdPromedio.value=acumulador/contador;
 }//FIN DE LA FUNCIÓN

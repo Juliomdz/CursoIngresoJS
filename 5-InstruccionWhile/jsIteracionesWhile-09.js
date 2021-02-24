@@ -8,22 +8,37 @@ function mostrar()
 	let numeroMinimo;
 	let respuesta;
 
-	numeroMaximo=0;
-	numeroMinimo=9999;
-	respuesta='si';
-	while(respuesta=="si")
+	numeroMaximo;
+	numeroMinimo;
+	respuesta=true;
+	flag="Primer número."
+	
+	do
 	{
 		numeroIngresado=parseInt(prompt("Ingrese Un Numero:"));
-		if (numeroIngresado>numeroMaximo)
-		 {
-			numeroMaximo=numeroIngresado;
-		}
-		if (numeroIngresado<numeroMinimo)
+		if (flag=="Primer número.")
 		{
-		numeroMinimo = numeroIngresado;
+			numeroMaximo=numeroIngresado;
+			numeroMinimo=numeroIngresado;
+			flag="ya ta.";
 		}
-		respuesta=prompt("desea continuar?");
+		else
+		{
+			if (numeroIngresado>numeroMaximo)
+			{
+				numeroMaximo=numeroIngresado;
+			}
+			else
+			{
+				if (numeroIngresado<numeroMinimo)
+				{
+				numeroMinimo = numeroIngresado;
+				}
+			}
+		}
+		respuesta=confirm("desea continuar?");
 	}
+	while(respuesta);
 	txtIdMaximo.value=numeroMaximo;
 	txtIdMinimo.value=numeroMinimo;
 }//FIN DE LA FUNCIÓN

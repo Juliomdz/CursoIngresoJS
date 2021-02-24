@@ -25,8 +25,8 @@ function mostrar()
 	let promedioNegativos;
 	let diferenciaPositivosNegativos;
 
-	respuesta="si";
-	while(respuesta == "si")
+	respuesta=true;
+	do
 	{
 		numeroIngresado= parseInt(prompt("Ingrese un numero:"));
 		if (numeroIngresado == 0)
@@ -50,8 +50,9 @@ function mostrar()
 				cantidadNegativos++;
 			}
 		}
-		respuesta=prompt("desea continuar?");
-	}//fin del while
+		respuesta=confirm("desea continuar?");
+	}//fin del do
+	while(respuesta);
 	promedioPositivos = sumaPositivos/cantidadPositivos;
 	promedioNegativos = sumaNegativos/cantidadNegativos;
 	diferenciaPositivosNegativos = sumaPositivos+sumaNegativos;

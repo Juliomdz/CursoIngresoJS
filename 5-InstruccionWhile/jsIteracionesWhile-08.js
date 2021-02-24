@@ -11,8 +11,8 @@ function mostrar()
 	contador=0;
 	sumaPositivos=0;
 	multiplicacionNegativos=1;
-	respuesta="si";
-	while (respuesta=="si")
+	respuesta=true;
+	do
 	{
 		numeroIngresado=parseInt(prompt("Ingrese un numero:"));
 		if (numeroIngresado>0) 
@@ -24,8 +24,9 @@ function mostrar()
 		multiplicacionNegativos=multiplicacionNegativos*numeroIngresado;
 		}
 		contador++;
-		respuesta=prompt("¿Desea seguir ingresando numeros?");
+		respuesta=confirm("¿Desea seguir ingresando numeros?");
 	}
+	while (respuesta);
 	txtIdSuma.value=sumaPositivos;
 	txtIdProducto.value=multiplicacionNegativos;
 
