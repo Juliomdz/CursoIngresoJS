@@ -1,3 +1,20 @@
+/*
+Enunciado:
+al presionar el botón se mostrará 5 nombres
+que estaran contenidos en un vector.
+*/
+function mostrar()
+{
+
+	let arrayNombres = ["Juan","Luis","Maria","Nahuel","Yolanda"];
+
+document.write("El contenido del array es: <br>");
+	for(let i=0; i<5; i++)
+	{
+		document.write("Posicion "+i+"-->"+arrayNombres[i]+"<br>");
+	}
+}//FIN DE LA FUNCIÓN
+/*
 function mostrar()
 {
 
@@ -18,8 +35,5 @@ document.write("El contenido del vector es: <br>");
 		document.write("Posicion "+i+"-->"+miArray[i]+"<br>");
 	}
 
-
-
-
-
 }//FIN DE LA FUNCIÓN
+*/

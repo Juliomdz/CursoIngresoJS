@@ -21,8 +21,21 @@ function mostrar()
 }
 
 */
-
+/*
 function mostrar()
 {
 	alert("Esto funcina de maravilla");
+}
+*/
+function mostrar()
+{
+	let arrayNumeros = [0,1,2,2,3,4]; //arrayNumeros.push(dato)
+	let arrayOrden = ["primer","segundo","tercer","cuarto","quinto"];
+
+	for (let i = 0; i < 5; i++)
+	{
+		arrayNumeros[i]=parseInt(prompt("Ingrese un numero"));
+	}
+	for (let i = 0; i < 5; i++)
+	alert("el "+arrayOrden[i]+" numero es "+arrayNumeros[i]);
 }
