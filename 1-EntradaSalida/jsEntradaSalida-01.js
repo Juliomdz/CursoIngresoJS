@@ -39,3 +39,5 @@ function mostrar()
 	for (let i = 0; i < 5; i++)
 	alert("el "+arrayOrden[i]+" numero es "+arrayNumeros[i]);
 }
+
+//ACTUALIZACION DE PC
